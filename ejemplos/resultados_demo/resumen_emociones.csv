@@ -1,0 +1,7 @@
+﻿emotion,n_participants,empty_responses,n_significant_pixels,mean_abs_change,pixels_in_mask
+alegria,14,0,698,52.08,715
+tristeza,14,0,672,29.92,715
+miedo,14,0,665,38.99,715
+enojo,14,0,664,40.62,715
+asco,14,0,699,35.28,715
+sorpresa,14,0,590,38.53,715

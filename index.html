@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14233b">
+<title>Mapa corporal de las emociones · Actividad de clase</title>
+<link rel="stylesheet" href="css/app.css">
+<script defer src="config.js"></script><script defer src="assets/mask.js"></script>
+<script defer src="js/common.js"></script><script defer src="js/student.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><div class="logo"><span class="logo-mark">◉</span><span>EMOCIONES <small>· laboratorio didáctico</small></span></div><a class="header-link" href="profesor.html">Área del profesor</a></div></header>
+<main class="container student-main">
+<section class="intro"><div class="eyebrow">Actividad interactiva</div><h1>¿En qué parte del cuerpo<br><em>sentimos las emociones?</em></h1><p>Dibuja dónde notas que tu cuerpo se activa o se desactiva al experimentar distintas emociones. No hay respuestas correctas: nos interesan tus sensaciones.</p></section>
+<section class="card student-info" id="welcome">
+  <div class="section-heading"><span class="step-number">1</span><div><h2>Antes de comenzar</h2><p>Usaremos tu nombre únicamente para identificar tu participación en esta actividad.</p></div></div>
+  <div class="field-grid"><label>Nombre del estudiante <span class="req">*</span><input id="student-name" maxlength="90" autocomplete="name" placeholder="Nombre y apellido" required></label><label>Código del grupo <span class="req">*</span><input id="class-code" maxlength="12" autocomplete="off" placeholder="Ej. EMOC2026" autocapitalize="characters" required></label></div>
+  <label class="consent"><input type="checkbox" id="consent"> <span>Entiendo que mi nombre y mis dibujos se guardarán para esta actividad y podrán ser consultados por el profesor. El grupo solo verá resultados agregados, no mi respuesta individual.</span></label>
+  <div class="action-line"><button class="primary" id="begin">Comenzar actividad <span aria-hidden="true">→</span></button><span class="muted small" id="mode-hint"></span></div>
+  <div class="notice" id="begin-notice" role="status" hidden></div>
+</section>
+<section class="card activity" id="activity" hidden>
+  <div class="activity-top"><div><div class="eyebrow">PASO <span id="emotion-index">1</span> DE 6</div><h2 id="emotion-title">Alegría</h2><p id="emotion-description">Recuerda cómo se siente esta emoción en tu cuerpo.</p></div><div class="progress-dots" id="progress-dots" aria-label="Progreso"></div></div>
+  <div class="instruction">Marca en cada figura las zonas donde <strong>sientes un aumento o una disminución de actividad</strong>. Puedes dibujar con el dedo o el ratón. Deja sin pintar las regiones donde no percibes cambios.</div>
+  <div class="map-editors">
+    <div class="editor-card"><div class="editor-label"><span class="bullet warm"></span><div><strong>Mayor activación</strong><small>Calor, tensión, energía, latidos, movimiento…</small></div></div><canvas id="canvas-up" width="240" height="420" role="img" aria-label="Silueta para pintar aumento de actividad"></canvas><div class="legend-mini">Sin cambios <span class="gradient warm-gradient"></span> Mayor intensidad</div><button class="link-button" data-clear="up">Borrar esta figura</button></div>
+    <div class="editor-card"><div class="editor-label"><span class="bullet cool"></span><div><strong>Menor activación</strong><small>Pesadez, debilidad, frío, entumecimiento…</small></div></div><canvas id="canvas-down" width="240" height="420" role="img" aria-label="Silueta para pintar disminución de actividad"></canvas><div class="legend-mini">Sin cambios <span class="gradient cool-gradient"></span> Mayor intensidad</div><button class="link-button" data-clear="down">Borrar esta figura</button></div>
+  </div>
+  <div class="activity-footer"><button class="ghost" id="prev" type="button">← Anterior</button><span class="muted small">Pinta con el dedo o el ratón</span><button class="primary" id="next" type="button">Siguiente →</button></div>
+  <div class="notice" id="activity-notice" role="status" hidden></div><button class="secondary" id="download-backup" type="button" hidden style="margin-top:12px">Descargar copia JSON</button>
+</section>
+<section class="card completion" id="completion" hidden><div class="success-icon">✓</div><h2 id="finish-title">Actividad completada</h2><p id="finish-text"></p><div class="action-line"><button class="secondary" id="save-json" hidden>Descargar respuestas en JSON</button><button class="ghost" id="start-over">Comenzar nuevamente</button></div><div class="notice" id="finish-notice" role="status" hidden></div></section>
+<footer class="footer">Adaptación educativa inspirada en Nummenmaa et al. (2014). Los dibujos son autoinformes de sensaciones, no mediciones fisiológicas. <a href="https://doi.org/10.1073/pnas.1321664111" target="_blank" rel="noopener">Ver estudio original</a>.</footer>
+</main>
+</body></html>
